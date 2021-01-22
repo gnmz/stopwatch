@@ -4,11 +4,11 @@ export class DisplayComponent extends Component {
   render() {
     const { h, m, s, ms } = this.props;
     return (
-      <div>
-        <span>{h}</span>&nbsp;:&nbsp;
-        <span>{m}</span>&nbsp;:&nbsp;
-        <span>{s}</span>&nbsp;:&nbsp;
-        <span>{ms}</span>
+      <div className="display">
+        {h <= 0 ? null : <span>{h >= 10 ? h : "0" + h}</span>}
+        <span>{m >= 10 ? m : "0" + m}</span>
+        <span>{s >= 10 ? s : "0" + s}</span>
+        <span>{ms >= 10 ? ms : "0" + ms}</span>
       </div>
     );
   }

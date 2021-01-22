@@ -52,8 +52,8 @@ export class App extends Component {
   render() {
     const { h, m, s, ms, status } = this.state;
     return (
-      <div>
-        <div>
+      <div className="app">
+        <div className="stopwatch">
           <DisplayComponent h={h} m={m} s={s} ms={ms} />
           <BtnComponent
             status={status}
